@@ -6,7 +6,9 @@ const supportedLanguages = [
     'JavaScript',
     'HTML',
     'Python',
-    'Ruby'
+    'Ruby',
+    'C#',
+    'PHP'
 ];
 
 switch (language.toLowerCase()) {
@@ -28,6 +30,9 @@ switch (language.toLowerCase()) {
         break;
     case 'c#':
         generateCSharp();
+        break;
+    case 'php':
+        generatePHP();
         break;
     default:
         console.log('Please select one of the supported languages below:')
@@ -61,7 +66,7 @@ function generatePython() {
 
     fs.writeFile('helloWorld.py', body, (err) => {
         if (err) throw err;
-        console.log("Hello World application generated.\nRun with 'python helloWorld.py!");
+        console.log("Hello World application generated.\nRun with 'python helloWorld.py'!");
     });
 }
 
@@ -71,7 +76,7 @@ function generateRuby() {
 
     fs.writeFile('helloWorld.rb', body, (err) => {
         if (err) throw err;
-        console.log("Hello World application generated.\nRun with 'ruby helloWorld.rb!");
+        console.log("Hello World application generated.\nRun with 'ruby helloWorld.rb'!");
     });
 }
 
@@ -96,5 +101,14 @@ namespace HelloWorld
         console.log("Hello World application generated.\nRun with your favourite C# IDE");
         console.log('Note, you\ll probably need to create a C# project and copy this into your project')
     });
+}
 
+function generatePHP() {
+    console.log('Generating PHP Hello World script...');
+    let body = 'echo "Hello World";';
+
+    fs.writeFile('helloWorld.php', body, (err) => {
+        if (err) throw err;
+        console.log("Hello World script generated.\nRun with 'php helloWorld.php'!");
+    });
 }
