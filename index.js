@@ -26,6 +26,9 @@ switch (language.toLowerCase()) {
     case 'rb':
         generateRuby();
         break;
+    case 'c#':
+        generateCSharp();
+        break;
     default:
         console.log('Please select one of the supported languages below:')
         console.log(supportedLanguages)
@@ -70,4 +73,28 @@ function generateRuby() {
         if (err) throw err;
         console.log("Hello World application generated.\nRun with 'ruby helloWorld.rb!");
     });
+}
+
+function generateCSharp() {
+    console.log('Generating C# Hello World application...');
+    //Terrible formatting needed here so the C# app has correct spacing and doesn't look
+    //like a mess. It was either this or a string full of \n and \t
+    let body = `using System;
+                
+namespace HelloWorld
+{
+    class Hello {         
+        static void Main(string[] args)
+        {
+            Console.WriteLine('Hello World!');
+        }
+    }
+}`;
+
+    fs.writeFile('helloWorld.cs', body, (err) => {
+        if (err) throw err;
+        console.log("Hello World application generated.\nRun with your favourite C# IDE");
+        console.log('Note, you\ll probably need to create a C# project and copy this into your project')
+    });
+
 }
