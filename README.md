@@ -1,4 +1,4 @@
-# hello-world-generator
+# hello-world-generator-3000
 A node app that generates Hello World scripts/applications/pages.
 
 Run with `node index.js <language>`
