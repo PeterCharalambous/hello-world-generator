@@ -12,6 +12,7 @@ const supportedLanguages = [
 switch (language.toLowerCase()) {
     case 'js':
     case 'javascript':
+    case 'node':
         generateJS();
         break;
     case 'html':
