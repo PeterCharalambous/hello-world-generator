@@ -11,3 +11,6 @@ Current supported languages are:
 - Ruby
 - C#
 - PHP
+- Bash
+- Perl
+- Go
