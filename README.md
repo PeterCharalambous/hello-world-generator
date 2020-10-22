@@ -1,9 +1,14 @@
-# hello-world-generator-3000
-A node app that generates Hello World scripts/applications/pages.
+# Hello World Generator 3000
+Have **you** ever wanted to learn a new language, but wanted to skip the "Hello World" step? Well look no further than the **_Hello World Generator 3000_**. With this new revolutionary tool, simply run this script with the language you intend to learn and **BAM**, you'll have your Hello World script/app/page generated right in front of your very eyes. The future is **NOW!**
 
-Run with `node index.js <language>`
+# So how do I use this magnificent piece of software?
+Running this _glorious_ script is as simple as having [node](https://nodejs.org/en/)
+installed and executing this script with `node index.js <language>`
 
-Current supported languages are:
+
+# But what languages can this futuristic piece of software generate?
+
+This _exciting_ piece of software currently supports the below languages:
 
 - JavaScript
 - HTML
