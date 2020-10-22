@@ -46,6 +46,7 @@ switch (language.toLowerCase()) {
     case 'go':
         generateGo();
         break;
+    case 'help':
     default:
         console.log('Please select one of the supported languages below:')
         console.log(supportedLanguages)
